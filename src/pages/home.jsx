@@ -2,12 +2,19 @@ import React, { PureComponent } from "react";
 import store from "../store";
 import { addNumberAction } from "../store/actionCreators";
 
-export class home extends PureComponent {
+export class Home extends PureComponent {
   constructor() {
     super();
 
     this.state = {
       counter: store.getState().counter,
+
+      message: "Hello World",
+      friends: [
+        { id: 111, name: "why" },
+        { id: 112, name: "kobe" },
+        { id: 113, name: "james" },
+      ],
     };
   }
 
@@ -36,4 +43,4 @@ export class home extends PureComponent {
   }
 }
 
-export default home;
+export default Home;
