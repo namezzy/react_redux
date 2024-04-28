@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { fetchHomeMultiDataAction } from "../store/home";
+import { fetchHomeMultiDataAction } from "../store/actionCreators";
 
 export class Category extends PureComponent {
   componentDidMount() {
@@ -16,7 +16,7 @@ export class Category extends PureComponent {
 }
 
 const mapStateToPros = (state) => ({
-  counter: state.counter.counter,
+  counter: state.counter,
 });
 const mapDispatchToProps = (dispatch) => ({
   fetchHomeMultidata() {

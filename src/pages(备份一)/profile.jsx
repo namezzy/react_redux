@@ -1,19 +1,19 @@
 import React, { PureComponent } from "react";
 import store from "../store";
-import { subNumberAction } from "../store/counter";
+import { subNumberAction } from "../store/actionCreators";
 
 export class profile extends PureComponent {
   constructor() {
     super();
 
     this.state = {
-      counter: store.getState().counter.counter,
+      counter: store.getState().counter,
     };
   }
 
   componentDidMount() {
     store.subscribe(() => {
-      const state = store.getState().counter;
+      const state = store.getState();
       this.setState({ counter: state.counter });
     });
   }

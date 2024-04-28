@@ -11,13 +11,13 @@ export default class App extends PureComponent {
     super();
 
     this.state = {
-      counter: store.getState().counter,
+      counter: store.getState().counter.counter,
     };
   }
 
   componentDidMount() {
     store.subscribe(() => {
-      const state = store.getState();
+      const state = store.getState().counter;
       this.setState({ counter: state.counter });
     });
   }
