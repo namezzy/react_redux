@@ -1,5 +1,5 @@
 const initialState = {
-  userInfo: { nickname: "刘军老师", level: 100 },
+  userInfo: { nickname: "Coderwhy Teacher", level: 100 },
 };
 
 function reducer(state = initialState, action) {
